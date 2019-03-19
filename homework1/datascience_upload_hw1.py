@@ -7,7 +7,7 @@ import xlwt
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-file_r = "C:\\Users\\Will\\Desktop\\datascience\\homework1\\野村證券CRM.xlsx" #自己在本機端設個EXCEL來放廠商名稱跟信箱
+file_r = "C:\\Users\\Will\\Desktop\\datascience\\homework1\\野村證券CRM.xlsx" #資料們
 book_r = xlrd.open_workbook(file_r,encoding_override="utf-8")
 sheet_1 = book_r.sheet_by_index(1)
 onshore_postcode_list = []
@@ -51,7 +51,7 @@ sort_tw_value = list(tw.values())
 sort_tw_value.sort(reverse=True)
 sort_tw = [[k, tw[k]] for k in sorted(tw, key=tw.get, reverse=True)] 
 # sort value後，以list方式儲存
-print(sort_tw)
+#print(sort_tw)
 sort_tw_place = []
 for h in range(len(sort_tw)):
     sort_tw_place.append(sort_tw[h][0])
@@ -63,6 +63,6 @@ plt.title("各地區人數")
 yaxis = np.arange(0,20,5)
 plt.yticks(yaxis)
 plt.legend()
-plt.savefig('C:\\Users\\Will\\Desktop\\MACD6.png')
+#plt.savefig('C:\\Users\\Will\\Desktop\\MACD6.png') #存成圖檔
 plt.show()
-print(tw)
+#print(tw)
